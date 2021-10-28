@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Purchased;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
@@ -60,11 +61,14 @@ class UserController extends Controller
 
     /**
      * Create new purchased product data for authenticated user
+     *
      * @param \Illuminate\Http\Request
      * @return \Illuminate\Http\Response
      */
     public function createUserProduct(Request $request)
     {
+        Log::info("\n");
+        Log::info(json_encode($request->all()));
         $data = $request->only(['sku']);
         $validation = Validator::make($data, [
             'sku' => 'required|string|exists:products,sku'

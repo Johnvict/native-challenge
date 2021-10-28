@@ -21,3 +21,6 @@ services:
       MYSQL_ROOT_PASSWORD: ""
     volumes:
       - ./db:/var/lib/mysql
+  test_db:
+    image: keinos/sqlite3:latest
+    container_name: test_db

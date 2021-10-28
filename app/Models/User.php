@@ -44,6 +44,8 @@ class User extends Model implements JWTSubject, AuthenticatableContract, Authori
 
     /**
      * Products purchased by a user
+     *
+     * @return Illuminate\Database\Eloquent\Concerns\HasRelationships::belongsToMany
      */
     public function products() {
         return $this->belongsToMany(
@@ -58,6 +60,8 @@ class User extends Model implements JWTSubject, AuthenticatableContract, Authori
 
     /**
      * Purchase record for a user
+     *
+     * @return Illuminate\Database\Eloquent\Concerns\HasRelationships::hasMany
      */
     public function purchases() {
         return $this->hasMany(

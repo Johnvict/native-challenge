@@ -32,6 +32,15 @@
 <br>
 <br>
 
+## Run Test
+  - Run the following command to run test
+
+        $ docker-compose exec app vendor/bin/phpunit
+
+
+<br>
+<br>
+
 ## Bonuses
  - Connect to database on your local machine via some database client (such as Sequel Pro)
   

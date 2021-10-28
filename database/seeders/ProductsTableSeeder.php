@@ -16,6 +16,7 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         $products = $this->loadFromFile();
+        Product::truncate();
         Product::insert($products);
     }
 

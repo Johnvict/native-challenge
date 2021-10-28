@@ -15,6 +15,6 @@ class ProductController extends Controller {
      */
     public function getProducts(Request $request) {
         $products = Product::all();
-        return self::returnSuccess($products, 200);
+        return self::returnSuccess($products);
     }
 }

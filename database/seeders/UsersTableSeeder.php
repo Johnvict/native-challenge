@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $users = $this->loadFromFile();
+        User::truncate();
         User::insert($users);
     }
 

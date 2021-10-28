@@ -16,6 +16,7 @@ class PurchasedTableSeeder extends Seeder
     public function run()
     {
         $purchasedItems = $this->loadFromFile();
+        Purchased::truncate();
         Purchased::insert($purchasedItems);
     }
 
