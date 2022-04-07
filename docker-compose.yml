@@ -11,7 +11,7 @@ services:
       - ./:/var/www/html
   db:
     image: mysql:5.7.22
-    container_name: db2
+    container_name: db
     restart: always
     ports:
       - "3308:3306"
